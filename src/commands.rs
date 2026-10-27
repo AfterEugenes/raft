@@ -132,6 +132,8 @@ fn display_file(file_path: String, params: Parameters){
         }
     };
     println!("Content of the file:\n{}", file_content);
+    let parsed = json::parse(file_content).unwrap();
+    println!("Here is the contant: {}", parsed.code);
 }
 
 impl Cli {
